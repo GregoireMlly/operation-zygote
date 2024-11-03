@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf public",
     "deploy": "gh-pages -d dist",
     "purge": "npm run clean && rm -rf node_modules",
     "serve": "http-server dist",
