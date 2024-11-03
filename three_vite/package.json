@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf public",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d public",
     "purge": "npm run clean && rm -rf node_modules",
     "serve": "http-server dist",
     "cloud": "cloudflared --url http://localhost:5173/"
