@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
+    "deploy": "gh-pages -d dist",
     "purge": "npm run clean && rm -rf node_modules",
     "serve": "http-server dist",
     "cloud": "cloudflared --url http://localhost:5173/"
@@ -21,6 +22,7 @@
     "vite-plugin-static-copy": "^1.0.6"
   },
   "dependencies": {
+    "gh-pages": "^6.2.0",
     "three": "^0.169.0"
   }
 }

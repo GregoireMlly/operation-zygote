@@ -124,7 +124,7 @@ function gltfVirusReader(gltf){
 function loadInfection() {
   console.log("data loaded");
   new GLTFLoader()
-    .setPath('public/assets/models/')
+    .setPath('./assets/models/')
     .load('virus.gltf', gltfVirusReader, undefined, onError);
 }
 function onError(error) {
@@ -169,7 +169,7 @@ var playerBB;
 function loadSperm() {
   console.log("data loaded");
   new GLTFLoader()
-    .setPath('public/assets/models/')
+    .setPath('./assets/models/')
     .load('spermatozoide.gltf', gltfSpermReader, undefined, onError);
 }
 
@@ -220,7 +220,7 @@ function gltfOvuleReader(gltf) {
 function loadOvule() {
   console.log("data loaded");
   new GLTFLoader()
-    .setPath('public/assets/models/')
+    .setPath('./assets/models/')
     .load('ovule.glb', gltfOvuleReader, undefined, onError);
 }
 
@@ -251,7 +251,7 @@ textloader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.
 //audio
 
 const audioLoader = new AudioLoader();
-audioLoader.load('public/assets/musique/musique-epique-de-skyrim_SCyFcdcI.mp3', function(buffer) {
+audioLoader.load('./assets/musique/musique-epique-de-skyrim_SCyFcdcI.mp3', function(buffer) {
     console.log("musique");
     sound.setBuffer(buffer);
     sound.setLoop(true); 
@@ -276,7 +276,7 @@ function change_musique(path)
 }
 //Load image bébé
 const textureLoader = new TextureLoader();
-const texture = textureLoader.load('public/assets/image/imagebébé.jpg');
+const texture = textureLoader.load('./assets/image/imagebébé.jpg');
 const geometrybébé = new PlaneGeometry(8,8 );
 const materialbébé = new MeshBasicMaterial({ map: texture });
 const planebébé = new Mesh(geometrybébé, materialbébé);
@@ -388,7 +388,7 @@ async function  finish(){
   await rotateObject(sperm,3);
   //const win = winOrNot();
   scene.add(textMesh);
-  change_musique(win?"public/assets/musique/bebe qui pleure.mp3":"public/assets/musique/musique-triste-piano-et-violon-song-from-a-secret-garden_mt9UIyhj.mp3");
+  change_musique(win?"./assets/musique/bebe qui pleure.mp3":"./assets/musique/musique-triste-piano-et-violon-song-from-a-secret-garden_mt9UIyhj.mp3");
   if (win)
   {
     console.log("win");
