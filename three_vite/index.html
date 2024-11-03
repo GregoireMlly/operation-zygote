@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>three_vite</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div id="container"></div>
+  <div id="score" >Chance de fécondation: 100</div>
+  <style>
+    #score {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 45px;
+        font-family: Arial, sans-serif;
+        z-index: 10; /* Assurez-vous que l'élément reste au-dessus du canvas */
+    }
+</style>
+
+<button id="startButton" style="display: none;">Start</button>
+<style>
+  #startButton {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px 80px;
+      font-size: 60px;
+      cursor: pointer;
+      z-index: 10;
+  }
+</style>
+  <!--
+  <script src="./jsm/libs/ammo.wasm.js"></script>
+  -->
+ <script type="module" src="./main.js"></script>
+</body>
+
+</html>
